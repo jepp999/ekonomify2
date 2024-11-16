@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+        background: #f4f6fa;
+    /* height: 100vh; */
+    color: #1C244B;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+html,
+body {
+    margin: 0;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+    overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+#app {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    height: 300px;
+    padding: 10px;
+    background: linear-gradient(120deg, #ffffff, #ffffff);
+    box-shadow: -23px 20px 30px 10px #00000022;
+    position: absolute;
+    top: 200px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* For Firefox */
+    opacity: 0;
+    animation: slideFadeInApp 1s ease forwards;
+    animation-delay: 0.5s;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#app::-webkit-scrollbar {
+    width: 0px;
+}
+
+.outline {
+    outline: 2px solid #ffffff;
+    outline-offset: 20px;
+    width: 56%;
+    top: 200px;
+    height: 320px;
+    border-radius: 20px;
+    background-color: transparent;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#animated-heading {
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: -220px;
+    margin-bottom: 0px;
+    color: #1C244B;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#animated-heading span {
+    display: inline-block;
+    opacity: 0.01;
+    transform: translateY(-20px);
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+#animated-sub-heading span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+#animated-sub-heading span.space {
+    margin-left: 3.5px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFadeInApp {
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.sub-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #1C244B;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.app-box {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 250px;
+    padding: 10px;
+    background: linear-gradient(120deg, #ffffff, #ffffff);
+    position: absolute;
+    top: 200px;
+    opacity: 0;
+    animation: slideFadeInApp 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+button {
+    transition: opacity 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 20px;
+    border: #1C244B 1px solid;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    bottom: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    color: #1C244B;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+#yes-button {
+    margin-left: -110px;
+}
+
+button:hover,
+#yes-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+h3 {
+    font-size: 12px;
+    color: #1C244B;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+h4 {
+    margin-top: -2px;
+}
+
+h3,
+h4,
+p {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#app.fade-out h3,
+#app.fade-out h4,
+#app.fade-out p,
+#app.fade-out button {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.william-espegren-attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    translate: -50%;
+    font-size: 10px;
+}
+
+.william-espegren-attribution a {
+    color: #3b464f;
+    text-decoration: none;
+}
+
+#william-espegren-badge {
+    display: block;
+    transition: 0.5s;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+#design-code-by {
+    opacity: 0.6;
+}
+
+#william-espegren-link {
+    display: block;
+    transition: 0.5s;
+    border: 1px solid #3b464f74;
+    padding: 2px 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 16.5px;
+    opacity: 0.9;
+}
+
+#william-espegren-link:hover #william-espegren-badge {
+    translate: -120px;
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+#william-espegren-link:hover #william-espegren-easter-egg {
+    translate: 0px;
+    transition: 0.5s;
+}
+
+#william-espegren-easter-egg {
+    display: block;
+    margin-top: -17px;
+    translate: 80px;
+    transition: 0.5s;
+    font-size: 13px;
+}
+
+
+#tax-opportunities {
+    border: 2px solid #fff;
+    width: 500px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    border-radius: 25px;
+    margin-top: 40vh;
+    background: linear-gradient(120deg, #ffffff, #ffffff);
+    padding-bottom: 20px;
+    padding: 0 30px;
+    height: auto;
+    text-align: left;
+    box-shadow: -23px 20px 50px 10px #0000001a;
+    opacity: 0;
+    animation: slideFadeInApp 1s ease forwards;
+    animation-delay: 0.3s;
+    display: none;
+}
+
+#tax-opportunities h5 {
+    font-size: 16px;
+}
+
+#tax-opportunities ol {
+    margin-top: 10px;
+    padding: 0;
+}
+
+#tax-opportunities-list {
+    padding: 0;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin-left: -10px;
+    background-color: #1C244B;
+    transform: translateY(-12px);
+    opacity: 0.75;
+    border-radius: 20px;
+}
+
+#progress-bar-background {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    margin-left: -10px;
+    background-color: grey;
+    transform: translateY(-12px);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+.tax-opportunity {
+    white-space: pre-wrap;
+}
+
+.divider {
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+    border-radius: 200px;
+    margin-top: 40px;
+}
+
+.tax-opportunity-button {
+    background: rgba(128, 128, 128, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #1C244B;
+    transform: translateY(-90px) translateX(-90px);
+    position: absolute;
+}
+
+.scrollable-content {
+    height: 150px;
+    overflow-y: auto; 
+    margin-bottom: 60px;
+}
+
+.scrollable-content p {
+    white-space: pre-wrap;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+#print-page {
+    width: 150px;
+    background-color: #1C244B;
+    color: white;
+    position: fixed;
+    right: 20px;
+    top: 90%;
+    margin: 0;
+    display: none;
+}
+
+#print-page:hover {
+    cursor: pointer;
+    background-color: white;
+    color:#1C244B;
+    transition: 0.5s;
+    scale: 1;
+}
+
+#previous-button {
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.5s;
+}
+
+#logo {
+    position: fixed; 
+    width: 200px;
+    top: -160px;
+    left: 180px;
+    animation: slideFadeInApp 1s ease forwards;
+    opacity: 0;
+}
+
+body {
+    -webkit-user-select: none; /* Apple devices */
+}
+
+@media only screen and (max-width: 700px) {
+    #logo {
+        left:130px;
+    }
+}
+
+/* Media queries for small screens */
+@media only screen and (max-width: 600px) {
+
+    #app,
+    .app-box,
+    .outline {
+        width: 80vw;
+        /* 80% of the viewport width */
+        padding: 5vw;
+        /* 5% of the viewport width */
+        height: 300px;
+        top: 220px;
+    }
+
+    #app,
+    .app-box {
+        height: 300px;
+        top: 220px;
+        font-size: 16px;
+    }
+
+    #tax-opportunities {
+        width: 80vw;
+    }
+
+    .scrollable-content {
+        height: 175px;
+        margin-bottom: 0px;
+    }
+
+    #logo {
+        top: -180px;
+        left: 50%;
+        width: 140px;
+    }
+}
